@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= book.title
+  p= book.summary
+  p Genre: #{book.genre.name}
+  p Author: #{book.author.name}
+  a(href='/catalog/books') Back to List

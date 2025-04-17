@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 Feedback List
+  table.table
+    thead
+      tr
+        th Username
+        th Email
+        th Phone Number
+        th Gender
+        th Difficulty
+        th Comments
+        th Created At
+    tbody
+      each feedback in feedbacks
+        tr
+          td= feedback.username
+          td= feedback.email
+          td= feedback.phoneNumber
+          td= feedback.gender
+          td= feedback.difficulty
+          td= feedback.comments
+          td= feedback.createdAt.toLocaleDateString()

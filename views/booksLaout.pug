@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Feedback Form
+  form(action="/book/create" method="POST")
+    .form-group
+            label(for="title") Title
+            input#title.form-control(type="text" name="title" placeholder="Enter the book title" required)
+                .form-group
+                    label(for="author") Author
+                    select#author.form-control(name="author")
+                    option(value="") Select an Author
+                    each author in authors
+                        option(value=author._id) #{author.name}
+                .form-group
+                    label(for="summary") Summary
+                    textarea#summary.form-control(name="summary" rows="4" placeholder="Write a brief summary of the book" required)
+                .form-group
+                    label(for="genre") Genre
+                    select#genre.form-control(name="genre")
+                    option(value="") Select a Genre
+                    each genre in genres
+                        option(value=genre._id) #{genre.name}
+                .form-group
+                    button.btn.btn-primary(type="submit") Create Book

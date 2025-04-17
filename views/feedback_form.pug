@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-8.offset-md-2
+        h1  Feedback Form
+        form(action="/feedback/create" method="POST")
+                .form-group
+                    label(for="email") Email
+                    input#email.form-control(type="email" name="email" placeholder="Enter email id" required)
+                
+                .form-group
+                    label(for="username") Username:
+                    input#username.form-control(type="text" name="username"  required)
+                .form-group
+                    label(for="phoneNumber") Phone Number:
+                    input#phoneNumber.form-control(type="text" name="phoneNumber" required)
+                .form-group
+                    label Gender :
+                    input(type="radio" name="gender" value="Male" required)
+                    | Male
+                    input(type="radio" name="gender" value="Female" required) 
+                    | Female
+                .form-group
+                    label(for="difficulty") Difficulty (1-10):
+                    input#difficulty.form-control(type="range" name="difficulty" min="1" max="10" step="1" value="5" required)
+                    
+              
+
+                
+                .form-group
+                    label(for="comments") Comments:
+                    textarea#comments.form-control(name="comments"  rows="4" required)
+                
+                .form-group
+                    button.btn.btn-success(type="submit") Submit
