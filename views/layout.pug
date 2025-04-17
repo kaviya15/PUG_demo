@@ -3,28 +3,27 @@
 doctype html
 html
   head
-    title Feedback Form
+    title Book Management System
     link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
   body
     nav(class="navbar navbar-expand-lg navbar-dark bg-dark")
-      a(class="navbar-brand" href="/") Feedbacks
+      a(class="navbar-brand" href="/") Book Management System
       button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
         span(class="navbar-toggler-icon")
       div(class="collapse navbar-collapse" id="navbarNav")
         ul(class="navbar-nav ml-auto")
           li(class="nav-item active")
             a(class="nav-link" href="/") Home
-        
           li(class="nav-item")
-            a(class="nav-link" href="") Tic Tac Toe
+            a(class="nav-link" href="/catalog/books") Books
           li(class="nav-item")
-            a(class="nav-link" href="/feedback/create") Create Feedback
-              li(class="nav-item")
-            a(class="nav-link" href="/feedback/") show Feedbacks
-     
+            a(class="nav-link" href="/catalog/book/create") Create
+
+
     block content
       // Content will be injected here
-
+      h1 Welcome to the Book Management System
+      p Manage your books and authors here.
 
     script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
     script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js")
